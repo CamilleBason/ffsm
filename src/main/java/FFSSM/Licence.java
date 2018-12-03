@@ -51,8 +51,14 @@ public class Licence {
      * @return vrai si valide à la date d
      **/
     public boolean estValide(Calendar d) {
-         // TODO: Implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        
+        Calendar f = (Calendar) delivrance.clone();
+        f.add(Calendar.YEAR, 1);
+        if (d.after(f)) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
 }

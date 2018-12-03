@@ -6,7 +6,7 @@ public class Embauche {
 
     private Calendar debut;
 
-    private Calendar fin;
+    public Calendar fin;
 
     private final Moniteur employe;
 
@@ -16,6 +16,7 @@ public class Embauche {
         this.debut = debut;
         this.employe = employe;
         this.employeur = employeur;
+        fin=null;
     }
 
     /**
@@ -23,8 +24,7 @@ public class Embauche {
      * @param dateFin la date à laquelle cette embauche est terminée
      */
     public void terminer(Calendar dateFin) {
-         // TODO: Implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");	    
+        fin=dateFin;	    
     }
     
     /**
